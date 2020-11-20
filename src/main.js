@@ -17,21 +17,16 @@ $(document).ready(function() {
   $("#money-button").click(function() {
     let promise = ExchangeService.getRates();
     promise.then(function(response) {
-      const body = JSON.parse(response);  
+      const body = JSON.parse(response);
+      const{USD, AED, ARS, AUD, BGN, BRL} = body.conversion_rates
       let conversion = new Conversion();
       conversion.amountToConvert = parseInt($("#amount").val());
       conversion.countryCode = $("#convert-to").val;
-      conversion.rate =`${body.conversion_rates.AED}`;
+      conversion.rate = AED;
       conversion.convertMonies();
       console.log(conversion);
-      displayRates(body);
+      displayRates(conversion);
 
     });
-
-    // ExchangeService.getRates()
-    //   .then(function(response){
-    //     console.log(response);
-    //     displayRates(response);
-    //   });
   });
 });
