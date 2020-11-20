@@ -1,3 +1,5 @@
-body {
-  background-image: url(src/assets/img/monies.jpg);
+.jumbotron {
+  background-image: url(../assets/img/monies.jpg);
+  color: rgb(236, 48, 105);
+  text-align: center;
 }

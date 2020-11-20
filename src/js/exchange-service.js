@@ -1,6 +1,6 @@
 export default class ExchangeService {
-  static getRate() {
-    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
+  static getRates() {
+    return fetch(`https://v6.exchangerate-api.com/v6/13dd1392322b2440d5a55de6/latest/USD`)
       .then(function(response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -9,6 +9,6 @@ export default class ExchangeService {
       })
       .catch(function(error) {
         return error;
-      })
+      });
   }
 }
