@@ -7,7 +7,6 @@ export default class ExchangeService {
         if (this.status === 200) {
           resolve(request.response);
         } else {
-          console.log(request.response);
           reject(request.response);
         }
       };
