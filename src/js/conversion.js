@@ -3,6 +3,6 @@ export default class Conversion {
     this.countryCode = countryCode;
     this.rate = rate;
     this.amountToConvert = amountToConvert
-    this.cashConverted = 5;
+    this.cashConverted = 0;
   }
 }
