@@ -6,6 +6,7 @@ import ExchangeService from './js/exchange-service.js';
 
 function displayRates(response) {
   if (response.conversion_rates) {
+    
     $("#show-rate").text(`1 United States Dollar equals ${response.conversion_rates.AED} in United Arab Emirates Dirham`);
   } else {
     $("#show-error").text(`There was an error: ${response}`);
@@ -15,10 +16,15 @@ function displayRates(response) {
 $(document).ready(function() {
   $("#money-button").click(function() {
     // let amount = parseInt($("#amount").val());
-    ExchangeService.getRates()
-      .then(function(response){
-        console.log(response);
-        displayRates(response);
-      });
+    let promise = ExchangeService.getRates();
+    promise.then(function(response) {
+      const body = JSON.parse(response); 
+      displayRates(body);
+    });
+    // ExchangeService.getRates()
+    //   .then(function(response){
+    //     console.log(response);
+    //     displayRates(response);
+    //   });
   });
 });
