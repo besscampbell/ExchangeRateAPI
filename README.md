@@ -58,9 +58,9 @@
 
 | Test | Describe     |      Test     | `expect().toEqual()` |
 |:------:| :------------ |:-------------| :---------------------------|
-| 1 | **Conversion(countryCode, rate, cashConverted)**  |_"It should create a conversion object using the constructor"_ | let conversion = new Conversion("AED", 3.67, 0)<br>**expect**`(conversion.countryCode).toEqual("AED")<br>**expect**(conversion.rate).toEqual(3.67)`<br>**expect**`(conversion.cash).toEqual(0)` |
+| 1 | **Conversion(countryCode, rate, cashConverted)**  |_"It should create a conversion object using the constructor"_ | let conversion = new Conversion("AED", 3.67, 10, 0)<br>**expect**`(conversion.countryCode).toEqual("AED")`<br>**expect**`(conversion.rate).toEqual(3.67)`<br>**expect**`(conversion.amountToConvert).toEqual(10)`<br>**expect**`(conversion.cash).toEqual(0)` |
 |   | | | |
-|2 | **convertMonies()** |_"It should correctly take the amount input and times it by rate to get the amount in another currency"_ |**expect**(`(convertMonies(10)).toEqual(36.7)` |
+|2 | **convertMonies()** |_"It should correctly take the amount to convert and times it by rate to get the amount in another currency"_ |**expect**(`(convertMonies(10)).toEqual(36.7)` |
 
 
  
