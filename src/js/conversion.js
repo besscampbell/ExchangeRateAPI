@@ -6,6 +6,7 @@ export default class Conversion {
     this.cashConverted = 0;
   }
   convertMonies() {
-    this.cashConverted = this.amountToConvert * this.rat
+    this.cashConverted = this.amountToConvert * this.rate
+    return this.cashConverted
   }
 }
