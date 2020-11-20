@@ -5,14 +5,20 @@
 </head>
 <body>
   <div class="jumbotron jumbotron-fluid">
-    <h1>Exchange your monies at the most up to date rates!</h1>
+    <div class="container">
+      <h1>Exchange your monies at the most up to date rates!</h1>
+    </div>
   </div>
   <div class="container">
     <form id="money-form">
       <div class="form-group">
+        <label for="amount">How much?</label>
+        <input id="amount" class="form-control" type="number">
+      </div>
+      <div class="form-group">
         <label for="exchange-from">Exchange from:</label>
         <select class="form-control" id="exchange-from">
-          <option value="USD">U.S. Dollar</option>
+          <option value="USD">in U.S. Dollars</option>
         </select>  
       </div>
       <div class="form-group">
