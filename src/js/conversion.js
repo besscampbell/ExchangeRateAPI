@@ -1,7 +1,8 @@
 export default class Conversion {
-  constructor (countryCode, rate, cashConverted) {
+  constructor (countryCode, rate, amountToConvert, cashConverted) {
     this.countryCode = countryCode;
     this.rate = rate;
-    this.cashConverted = 0;
+    this.amountToConvert = amountToConvert
+    this.cashConverted = 5;
   }
 }
