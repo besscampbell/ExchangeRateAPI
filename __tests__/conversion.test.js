@@ -12,5 +12,7 @@ describe( 'Conversion', () => {
     expect(conversion.amountToConvert).toEqual(10)
     expect(conversion.cashConverted).toEqual(0);
   });
-  // test('should correctly convert USD into')
+  test('should correctly put out the cash converted by multiplying the amount to convert by the rate', () => {
+    expect(conversion.convertMonies()).toEqual(36.70);
+  });
 });
