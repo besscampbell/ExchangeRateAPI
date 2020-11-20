@@ -12,5 +12,5 @@ describe( 'Conversion', () => {
     expect(conversion.amountToConvert).toEqual(10)
     expect(conversion.cashConverted).toEqual(0);
   });
-  test('should correctly convert USD into')
+  // test('should correctly convert USD into')
 });
