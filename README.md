@@ -56,18 +56,12 @@
 
 | Test | Describe     |      Test     | `expect().toEqual()` |
 |:------:| :------------ |:-------------| :---------------------------|
-| 1 | **Conversion constructor**  |_"It should create a conversion object using the constructor"_ | let conversion = new Conversion("AED", 3.67, 0)<br>**expect**(`conversion.countryCode`).`toEqual`("AED")<br>**expect**(`conversion.rate`).`toEqual`(3.67)<br>**expect**(`conversion.cash`).`toEqual`(0) |
+| 1 | **Conversion(countryCode, rate, cash)**  |_"It should create a conversion object using the constructor"_ | let conversion = new Conversion("AED", 3.67, 0)<br>**expect**`(conversion.countryCode).toEqual("AED")<br>**expect**(conversion.rate).toEqual(3.67)`<br>**expect**`(conversion.cash).toEqual(0)` |
 |   | | | |
-| 2 | **mercuryAge** |_should correctly output: 1. users age 2. user life expectancy 3. years left;<br><br>All refactored in Mercury years_ |**expect**(`reusableStats.mercury()).toEqual`("Your Mercury stats: Age - 8.4, Expected life - 24, Your remaining life is about 15.6 years!");<br><br>**expect**(`reusableStats2.mercury()).toEqual`("Your Mercury stats: Age - 24, Expected life - 8.4, You have outlived your life expectancy by 15.6 years!"); |
-|   | | | |
-| 3 | **venusAge** | _should correctly output: 1. users age 2. user life expectancy 3. years left;<br><br>All refactored in Venus years_ | **expect**(`reusableStats.venus()).toEqual`("Your Venus stats: Age - 21.7, Expected life - 62, Your remaining life is about 40.3 years!");<br><br>**expect**(`reusableStats2.venus()).toEqual`("Your Venus stats: Age - 62, Expected life - 21.7, You have outlived your life expectancy by 40.3 years!"); |
-|   | | | |
-| 4 | **marsAge** | _should correctly output: 1. users age 2. user life expectancy years left;<br><br>All refactored in Mars years_ | **expect**(`reusableStats.mars()).toEqual`("Your Mars stats: Age - 65.8, Expected life - 188, Your remaining life is about 122.2 years!");<br><br>**expect**(`reusableStats2.mars()).toEqual`("Your Mars stats: Age - 188, Expected life - 65.8, You have outlived your life expectancy by 122.2 years!"); |
-|   | | | |
-| 5 | **jupiterAge** | _should correctly output: 1. users age 2. user life expectancy years left;<br><br>All refactored in Jupiter years_ | **expect**(`reusableStats.jupiter()).toEqual`("Your Jupiter stats: Age - 415.1, Expected life - 1186, Your remaining life is about 770.9 years!");<br><br>**expect**(`reusableStats2.jupiter()).toEqual`("Your Jupiter stats: Age - 1186, Expected life - 415.1, You have outlived your life expectancy by 770.9 years!"); |
-|   | | | |
-| 6 | **yearsDynamic** | _should correctly assign dynamic value to `this.yearsLeft`, depending on if users age is under or over the expected life_ | **expect**(`reusableStats.yearsDynamic()).toEqual`("Your remaining life is about")<br><br>**expect**(`reusableStats2.yearsDynamic()).toEqual`("You have outlived your life expectancy by"); |
+|2 | **convertMonies()** |_"It should correctly take the amount input and times it by rate to get the amount in another currency"_ |**expect**(`(convertMonies(10)).toEqual(36.7)` |
 
+
+ 
 
 ## Known Bugs
 
