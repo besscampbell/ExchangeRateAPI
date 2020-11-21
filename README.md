@@ -61,13 +61,13 @@
 | 1 | **Conversion(countryCode, rate, cashConverted)**  |_"It should create a conversion object using the constructor"_ | let conversion = new Conversion("AED", 3.67, 10, 0)<br>**expect**`(conversion.countryCode).toEqual("AED")`<br>**expect**`(conversion.rate).toEqual(3.67)`<br>**expect**`(conversion.amountToConvert).toEqual(10)`<br>**expect**`(conversion.cash).toEqual(0)` |
 |   | | | |
 |2 | **convertMonies()** |_"It should correctly take the amount to convert and times it by rate to get the amount in another currency"_ |**expect**(`(convertMonies(10)).toEqual(36.7)` |
+|   | | | |
+|3 | **matchCountry()** |_"It should correctly match the country code to the property in the JSON and set the exchange rate equal to the conversion.rate"_ |**expect**(`(matchCountry("AED")).toEqual(36.7)` |
 
-
- 
 
 ## Known Bugs
 
- TODO 
+ No known bugs. 
 
 ## Support and contact details
 
