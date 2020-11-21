@@ -17,7 +17,7 @@ $(document).ready(function() {
   $("#money-button").click(function() {
     let promise = ExchangeService.getRates();
     promise.then(function(response) {
-      const body = JSON.parse(response);
+       const body = JSON.parse(response);
       let conversion = new Conversion();
       conversion.amountToConvert = (parseInt($("#amount").val())).toFixed(2);
       conversion.countryCode = $("#convert-code").val();
