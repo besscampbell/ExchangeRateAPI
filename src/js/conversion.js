@@ -9,8 +9,11 @@ export default class Conversion {
   }
 
   matchCountry(body) {
+    console.log(body.conversion_rates.USD);
     const{USD, AED, ARS, AUD, BGN, BRL} = body.conversion_rates;
-    if( this.countryCode === "AED"){
+    if (this.countryCode === "USD") {
+      this.rate = USD;
+    } else if( this.countryCode === "AED") {
       this.rate = AED;
     } else if (this.countryCode === "ARS") {
       this.rate = ARS;
@@ -20,8 +23,6 @@ export default class Conversion {
       this.rate = BGN;
     } else if (this.countryCode === "BRL") {
       this.rate = BRL;
-    } else {
-      this.rate = USD;
     }
   }
   
