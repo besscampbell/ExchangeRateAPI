@@ -9,7 +9,6 @@ export default class Conversion {
   }
 
   matchCountry(body) {
-    console.log(body.conversion_rates.USD);
     const{USD, AED, ARS, AUD, BGN, BRL} = body.conversion_rates;
     if (this.countryCode === "USD") {
       this.rate = USD;

@@ -7,7 +7,7 @@ import Conversion from './js/conversion.js';
 
 function displayRates(response, object) {
   if (response.conversion_rates) {
-    $("#show-rate").text(`${object.amountToConvert} USD ==> ${object.cashConverted} in ${object.countryCode}`);
+    $("#show-rate").text(`${object.amountToConvert} ${response.base_code} ==> ${object.cashConverted} in ${object.countryCode}`);
   } else {
     $("#show-error").text(`There was an error: ${response}`);
   }
@@ -15,7 +15,9 @@ function displayRates(response, object) {
 
 $(document).ready(function() {
   $("#money-button").click(function() {
-    let promise = ExchangeService.getRates();
+    const country = $("#exchange-from").val();
+    console.log(country);
+    let promise = ExchangeService.getRates(country);
     promise.then(function(response) {
       const body = JSON.parse(response);
       let conversion = new Conversion();
