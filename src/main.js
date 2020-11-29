@@ -16,7 +16,6 @@ function displayRates(response, object) {
 $(document).ready(function() {
   $("#money-button").click(function() {
     const country = $("#exchange-from").val();
-    console.log(country);
     let promise = ExchangeService.getRates(country);
     promise.then(function(response) {
       const body = JSON.parse(response);
